@@ -1,0 +1,25 @@
+version: '3.7'
+
+volumes:
+  gems-app:
+
+services:
+  web:
+    tty: true
+    stdin_open: true
+    build: .
+    environment:
+      DB_HOST: 'db'
+    command: foreman start -f Procfile.dev
+    volumes:
+      - ./:/usr/src/app
+      - gems-app:/usr/local/bundle
+    ports:
+      - '3000:3000'
+    depends_on:
+      - db
+
+  db:
+    image: postgres
+    environment:
+      POSTGRES_HOST_AUTH_METHOD: 'trust'
