@@ -1,24 +1,33 @@
-# README
+## Tropical API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+![Rails Tests](https://github.com/valterandrei/tropical_api/workflows/Rails%20Tests/badge.svg)
 
-Things you may want to cover:
+1. Build image
+```
+docker-compose build
+```
 
-* Ruby version
+2. Access bash
+```
+docker-compose run --rm web bash
+```
 
-* System dependencies
+3. Install dependencies
+```
+bundle
+```
 
-* Configuration
+4. Setup database
+```
+rails db:create
+```
 
-* Database creation
+5. Tests
+```
+rspec
+```
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+6. Run project
+```
+docker-compose up web
+```
