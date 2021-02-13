@@ -1,5 +1,6 @@
 class WelcomeController < ApplicationController
   def index
-    @hello = 'Hello World!'
+    # tropical = TropicalService.run('caconde, br')
+    # TwitterService.send_tweet(tropical.sumary)
   end
 end

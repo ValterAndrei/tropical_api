@@ -1,6 +1,12 @@
 class TwitterService
   class << self
-    def load_client
+    def send_tweet(message)
+      client.update(message)
+    end
+
+    private
+
+    def client
       Twitter::REST::Client.new do |config|
         config.consumer_key        = ENV['CONSUMER_KEY']
         config.consumer_secret     = ENV['CONSUMER_SECRET']

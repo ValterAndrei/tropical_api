@@ -4,7 +4,7 @@ class TropicalService
       Tropical::OpenWeatherMap.new(
         {
           q: city,
-          lant: 'pt_br',
+          lang: 'pt_br',
           units: 'metric',
           appid: ENV['TROPICAL_APPID']
         }
