@@ -1,10 +1,3 @@
-GIT
-  remote: https://github.com/valterandrei/tropical
-  revision: a329a6aa19c9ddb22672205a2a107c22edb257fb
-  branch: main
-  specs:
-    tropical (0.1.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -163,6 +156,7 @@ GEM
       sprockets (>= 3.0.0)
     thor (1.1.0)
     tilt (2.0.10)
+    tropical (0.1.1)
     turbolinks (5.2.1)
       turbolinks-source (~> 5.2)
     turbolinks-source (5.2.0)
@@ -198,7 +192,7 @@ DEPENDENCIES
   rails (~> 6.1.2, >= 6.1.2.1)
   sass-rails (>= 6)
   spring
-  tropical!
+  tropical
   turbolinks (~> 5)
   tzinfo-data
   web-console (>= 4.1.0)

@@ -10,6 +10,8 @@ services:
     build: .
     environment:
       DB_HOST: 'db'
+    env_file:
+      - web-variables.env
     command: foreman start -f Procfile.dev
     volumes:
       - ./:/usr/src/app
