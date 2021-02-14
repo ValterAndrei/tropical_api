@@ -4,7 +4,7 @@ class SendTweetNotificationJob < ApplicationJob
   def perform
     return unless Rails.env.production?
 
-    tropical = TropicalService.run('São José dos Campos, br')
+    tropical = TropicalService.run({ 'q' => 'São José dos Campos, br' })
     TwitterService.send_tweet(tropical.sumary_current_day)
   end
 end
