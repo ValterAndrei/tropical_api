@@ -6,5 +6,6 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
 
-  get  'forecast', to: 'weather_forecast#check_forecast'
+  get  'forecast',     to: 'weather_forecast#check_forecast'
+  post 'notification', to: 'weather_forecast#create_tweet'
 end
