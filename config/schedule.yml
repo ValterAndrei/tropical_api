@@ -1,0 +1,7 @@
+# https://crontab.guru/
+
+public_tweet:
+  cron:  "*/1 * * * *" # it will retrieve data every 1 minute
+  class: "SendTweetNotificationJob"
+  queue: default
+  description: 'This job send tweet'

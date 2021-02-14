@@ -10,6 +10,7 @@ services:
     build: .
     environment:
       DB_HOST: 'db'
+      REDIS_URL: 'redis://redis:6379/12'
     env_file:
       - web-variables.env
     command: foreman start -f Procfile.dev
@@ -20,8 +21,28 @@ services:
       - '3000:3000'
     depends_on:
       - db
+      - redis
 
   db:
     image: postgres
     environment:
       POSTGRES_HOST_AUTH_METHOD: 'trust'
+
+  redis:
+    image: redis
+    command: redis-server
+    ports:
+      - '6379:6379'
+
+  sidekiq:
+    build: .
+    environment:
+      DB_HOST: 'db'
+      REDIS_URL: 'redis://redis:6379/12'
+    command: bash -c "RUBYOPT='-W0' bundle exec sidekiq --config ./config/sidekiq.yml"
+    volumes:
+      - ./:/usr/src/app
+      - gems-app:/usr/local/bundle
+    depends_on:
+      - db
+      - redis
