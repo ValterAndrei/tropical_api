@@ -2,7 +2,7 @@ class WeatherForecastController < ApplicationController
   def check_forecast
     tropical = TropicalService.run(params)
 
-    json_response(tropical.data)
+    json_response(tropical.data, tropical.status)
   end
 
   def create_tweet
