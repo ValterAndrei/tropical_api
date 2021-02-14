@@ -1,11 +1,12 @@
 class TropicalService
   class << self
-    def run(city)
+    def run(params)
       Tropical::OpenWeatherMap.new(
         {
-          q: city,
-          lang: 'pt_br',
-          units: 'metric',
+          q: params['q'],
+          lang: params['lang'] || 'pt_br',
+          units: params['units'] || 'metric',
+          cnt: params['cnt'] || '0',
           appid: ENV['TROPICAL_APPID']
         }
       )
