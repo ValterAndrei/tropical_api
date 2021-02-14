@@ -13,7 +13,7 @@ gem 'redis', '3.2.1' # heroku require this version because free version use redi
 gem 'sass-rails', '>= 6'
 gem 'sidekiq'
 gem 'sidekiq-cron', '~> 1.1'
-gem 'tropical', '~> 0.1.6'
+gem 'tropical', '~> 0.1.7'
 gem 'turbolinks', '~> 5'
 gem 'twitter', '~> 7.0'
 gem 'webpacker', '~> 5.0'
