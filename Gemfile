@@ -13,7 +13,7 @@ gem 'redis', '3.2.1' # heroku require this version because free version use redi
 gem 'sass-rails', '>= 6'
 gem 'sidekiq'
 gem 'sidekiq-cron', '~> 1.1'
-gem 'tropical', '~> 0.1.7'
+gem 'tropical', '~> 0.1.8'
 gem 'turbolinks', '~> 5'
 gem 'twitter', '~> 7.0'
 gem 'webpacker', '~> 5.0'
@@ -22,10 +22,6 @@ group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'rails-controller-testing'
   gem 'rspec-rails', '~> 4.0.2'
-end
-
-group :test do
-  gem 'shoulda-matchers', '~> 4.0'
 end
 
 group :development do
