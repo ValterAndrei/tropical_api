@@ -33,7 +33,7 @@ https://tropical-api-prod.herokuapp.com/notification
 ```
 ~~~json
 {
-	"q": "Caconde"
+  "q": "Caconde"
 }
 ~~~
 
@@ -43,7 +43,7 @@ https://tropical-api-prod.herokuapp.com/notification
 ```
 ~~~json
 {
-	"q": "Caconde",
+  "q": "Caconde",
   "units": "imperial",
   "lang": "pt_br"
 }
@@ -54,7 +54,7 @@ Parameters
 |-------|:----:|------------:|
 | q | required | City name, state code and country code divided by comma.|
 | cnt | optional | A number of timestamps, which will be returned in the API response.|
-| units | optional | Units of measurement. `standard`, `metric` and `imperial` units are available. If you do not use the `units` parameter, standard units will be applied by default.|
+| units | optional | Units of measurement. `standard`, `metric` and `imperial` units are available. If you do not use the `units` parameter, standard units will be applied by default. [Learn more](https://openweathermap.org/forecast5#data)|
 | lang | optional | [Learn more](https://openweathermap.org/forecast5#multi)
 
 
