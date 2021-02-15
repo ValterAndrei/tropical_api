@@ -1,5 +1,6 @@
 class WelcomeController < ApplicationController
   def index
-    @apis = ['link_1', 'link_2']
+    @api = 'https://github.com/ValterAndrei/tropical_api'
+    @gem = 'https://github.com/ValterAndrei/tropical'
   end
 end
