@@ -54,8 +54,8 @@ Parameters
 |-------|:----:|------------:|
 | q | required | City name, state code and country code divided by comma.|
 | cnt | optional | A number of timestamps, which will be returned in the API response.|
-| units | optional | Units of measurement. `standard`, `metric` and `imperial` units are available. If you do not use the `units` parameter, standard units will be applied by default. [Learn more](https://openweathermap.org/forecast5#data)|
-| lang | optional | [Learn more](https://openweathermap.org/forecast5#multi)
+| units | optional | Units of measurement. `standard` to Kelvin, `metric` to Celsius and `imperial` to Fahrenheit.|
+| lang | optional | `pt_br` [more options](https://openweathermap.org/forecast5#multi)
 
 
 
