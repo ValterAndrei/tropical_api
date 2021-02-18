@@ -86,7 +86,7 @@ rails db:create
 rspec
 ```
 
-6. Create file `web-variables.env` in project root path.
+6. Create file `.web-variables.env` in project root path.
 ```
 # Tropical
 TROPICAL_APPID=your_key
