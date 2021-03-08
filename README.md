@@ -25,7 +25,7 @@ https://tropical-api-prod.herokuapp.com/forecast?q=Caconde,br&lang=pt_br&units=i
 ```
 
 
-### Post tweet:
+### Post tweet message:
 
 > POST
 ```
