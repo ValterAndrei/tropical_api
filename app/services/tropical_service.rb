@@ -3,10 +3,10 @@ class TropicalService
     def run(params)
       Tropical::OpenWeatherMap.new(
         {
-          q: params['q'],
-          lang: params['lang'] || 'pt_br',
+          q:     params['q'],
+          lang:  params['lang'] || 'pt_br',
           units: params['units'] || 'metric',
-          cnt: params['cnt'] || '0',
+          cnt:   params['cnt'] || '0',
           appid: ENV['TROPICAL_APPID']
         }
       )
